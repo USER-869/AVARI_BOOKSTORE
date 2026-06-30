@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVARI BOOKSTORE | Chapters & Co.</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* High-quality dark wood texture background */
+            background: linear-gradient(rgba(29, 19, 10, 0.85), rgba(15, 10, 5, 0.95)), 
+                        url('https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1974&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #f3f4f6;
+        }
+        .serif-title {
+            font-family: 'Merriweather', serif;
+        }
+        /* Glassmorphism effect for modern Gen Z appeal */
+        .glass-panel {
+            background: rgba(43, 31, 22, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(244, 164, 96, 0.15);
+        }
+        .neon-glow:hover {
+            box-shadow: 0 0 15px rgba(244, 164, 96, 0.6);
+            transition: all 0.3s ease;
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col md:flex-row">
+
+    <nav class="w-full md:w-64 md:h-screen md:sticky md:top-0 glass-panel z-50 p-6 flex flex-col justify-between border-b md:border-b-0 md:border-r border-amber-900/40">
+        <div>
+            <div class="text-center md:text-left mb-8">
+                <h1 class="serif-title text-3xl font-bold text-amber-400 tracking-wide">AVARI</h1>
+                <p class="text-xs uppercase tracking-widest text-amber-200/60 font-semibold">Bookstore & Stationers</p>
+            </div>
+            
+            <div class="relative mb-6">
+                <input type="text" placeholder="Search books, manga, pens..." class="w-full bg-stone-900/80 text-sm text-white pl-9 pr-4 py-2 rounded-full border border-amber-700/50 focus:outline-none focus:border-amber-400 transition">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-amber-500/70 text-sm"></i>
+            </div>
+
+            <ul class="space-y-2 text-sm font-medium">
+                <li><a href="#hero" class="flex items-all items-center gap-3 px-4 py-2.5 rounded-lg text-amber-200 hover:bg-amber-900/40 hover:text-white transition"><i class="fa-solid fa-house text-amber-500"></i> Home</a></li>
+                <li><a href="#books" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-amber-200 hover:bg-amber-900/40 hover:text-white transition"><i class="fa-solid fa-book-open text-amber-500"></i> Book World</a></li>
+                <li><a href="#stationery" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-amber-200 hover:bg-amber-900/40 hover:text-white transition"><i class="fa-solid fa-pen-nib text-amber-500"></i> Stationery Hub</a></li>
+                <li><a href="#recommended" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-amber-200 hover:bg-amber-900/40 hover:text-white transition"><i class="fa-solid fa-star text-amber-500"></i> Top Picks</a></li>
+                <li><a href="#savelist" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-amber-200 hover:bg-amber-900/40 hover:text-white transition"><i class="fa-solid fa-heart text-amber-500"></i> My Saved List <span class="bg-amber-500 text-stone-900 text-xs px-2 py-0.5 rounded-full font-bold ml-auto">3</span></a></li>
+                <li><a href="#history" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-amber-200 hover:bg-amber-900/40 hover:text-white transition"><i class="fa-solid fa-clock-rotate-left text-amber-500"></i> Recently Viewed</a></li>
+            </ul>
+        </div>
+
+        <div class="hidden md:block pt-4 border-t border-amber-900/40 text-xs text-amber-200/70 space-y-2">
+            <p><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i> 123 Library Lane, NY</p>
+            <p><i class="fa-solid fa-phone text-amber-500 mr-1"></i> +1 234-567-890</p>
+        </div>
+    </nav>
+
+    <main class="flex-1 px-4 md:px-12 py-8 space-y-16 max-w-7xl mx-auto w-full">
+
+        <section id="hero" class="relative rounded-3xl overflow-hidden glass-panel p-8 md:p-16 flex flex-col md:flex-row items-center gap-8 border border-amber-500/20">
+            <div class="flex-1 space-y-6 text-center md:text-left z-10">
+                <span class="bg-amber-500/20 text-amber-400 text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full border border-amber-500/30">Aesthetic & Vintage Vibes</span>
+                <h2 class="serif-title text-4xl md:text-6xl font-bold leading-tight">Where <span class="text-amber-400 italic">Ink</span> Meets the <span class="text-amber-400">Soul</span>.</h2>
+                <p class="text-stone-300 max-w-lg text-sm md:text-base leading-relaxed">
+                    From timeless classic novels and thrilling manga to premium pastel highlighters and vintage fountain pens. Crafted for the old souls, the visionaries, and everyone in between.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
+                    <a href="#books" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">Explore Books</a>
+                    <a href="#stationery" class="border border-amber-400/40 hover:border-amber-400 text-amber-300 font-semibold px-6 py-3 rounded-xl transition">Shop Stationery</a>
+                </div>
+            </div>
+            <div class="flex-1 relative w-full flex justify-center items-center">
+                <img src="https://images.unsplash.com/photo-1513475393974-d32099a4e7b3?q=80&w=600&auto=format&fit=crop" alt="Premium Stationery" class="w-72 h-80 object-cover rounded-2xl shadow-2xl border-4 border-amber-900/60 transform rotate-3 hover:rotate-0 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=400&auto=format&fit=crop" alt="Manga Cover" class="w-40 h-52 object-cover rounded-xl shadow-2xl border-2 border-amber-500 absolute -bottom-6 -left-4 md:left-6 -rotate-12 hover:rotate-0 transition duration-300">
+            </div>
+        </section>
+
+        <section id="books" class="space-y-6">
+            <div class="flex justify-between items-end border-b border-amber-900/40 pb-4">
+                <div>
+                    <h2 class="serif-title text-3xl font-bold text-amber-400">The Book Haven</h2>
+                    <p class="text-xs text-stone-400">Novels, Manga, Magazines, News, & Children's Stories</p>
+                </div>
+                <div class="hidden sm:flex gap-2 text-xs font-semibold">
+                    <span class="px-3 py-1 rounded-full bg-amber-500 text-stone-950 cursor-pointer">All</span>
+                    <span class="px-3 py-1 rounded-full bg-stone-800 text-stone-300 hover:bg-amber-900/40 cursor-pointer">Manga</span>
+                    <span class="px-3 py-1 rounded-full bg-stone-800 text-stone-300 hover:bg-amber-900/40 cursor-pointer">Novels</span>
+                    <span class="px-3 py-1 rounded-full bg-stone-800 text-stone-300 hover:bg-amber-900/40 cursor-pointer">Kids</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="glass-panel rounded-2xl overflow-hidden p-3 flex flex-col justify-between neon-glow">
+                    <div class="relative group">
+                        <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=400&auto=format&fit=crop" class="w-full h-48 md:h-60 object-cover rounded-xl mb-3" alt="Novel">
+                        <span class="absolute top-2 right-2 bg-red-600 text-[10px] uppercase font-extrabold px-2 py-0.5 rounded text-white">Trending Novel</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white line-clamp-1">The Midnight Library</h3>
+                        <p class="text-xs text-stone-400 mb-2">Matt Haig</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-400 font-bold text-sm">$14.99</span>
+                            <button class="bg-amber-500/20 text-amber-300 hover:bg-amber-500 hover:text-stone-950 text-xs px-2.5 py-1.5 rounded-lg transition"><i class="fa-solid fa-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-2xl overflow-hidden p-3 flex flex-col justify-between neon-glow">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=400&auto=format&fit=crop" class="w-full h-48 md:h-60 object-cover rounded-xl mb-3" alt="Manga">
+                        <span class="absolute top-2 right-2 bg-purple-600 text-[10px] uppercase font-extrabold px-2 py-0.5 rounded text-white">Gen Z Pick</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white line-clamp-1">Neon Genesis Odyssey</h3>
+                        <p class="text-xs text-stone-400 mb-2">Volume 01 (Manga)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-400 font-bold text-sm">$11.99</span>
+                            <button class="bg-amber-500/20 text-amber-300 hover:bg-amber-500 hover:text-stone-950 text-xs px-2.5 py-1.5 rounded-lg transition"><i class="fa-solid fa-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-2xl overflow-hidden p-3 flex flex-col justify-between neon-glow">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=400&auto=format&fit=crop" class="w-full h-48 md:h-60 object-cover rounded-xl mb-3" alt="Kids Book">
+                        <span class="absolute top-2 right-2 bg-green-600 text-[10px] uppercase font-extrabold px-2 py-0.5 rounded text-white">Children</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white line-clamp-1">The Chronicles of Fables</h3>
+                        <p class="text-xs text-stone-400 mb-2">Illustrated Edition</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-400 font-bold text-sm">$9.99</span>
+                            <button class="bg-amber-500/20 text-amber-300 hover:bg-amber-500 hover:text-stone-950 text-xs px-2.5 py-1.5 rounded-lg transition"><i class="fa-solid fa-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-2xl overflow-hidden p-3 flex flex-col justify-between neon-glow">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=400&auto=format&fit=crop" class="w-full h-48 md:h-60 object-cover rounded-xl mb-3" alt="Magazine">
+                        <span class="absolute top-2 right-2 bg-amber-600 text-[10px] uppercase font-extrabold px-2 py-0.5 rounded text-white">Weekly News</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-white line-clamp-1">The Global Chronicle</h3>
+                        <p class="text-xs text-stone-400 mb-2">June 2026 Issue</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-400 font-bold text-sm">$5.50</span>
+                            <button class="bg-amber-500/20 text-amber-300 hover:bg-amber-500 hover:text-stone-950 text-xs px-2.5 py-1.5 rounded-lg transition"><i class="fa-solid fa-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stationery" class="space-y-6">
+            <div class="border-b border-amber-900/40 pb-4">
+                <h2 class="serif-title text-3xl font-bold text-amber-400">The Stationery Vault</h2>
+                <p class="text-xs text-stone-400">Premium journals, aesthetic study dynamic tools, sleek desktop items</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="glass-panel rounded-2xl overflow-hidden p-3 flex flex-col justify-between neon-glow">
+                    <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?q=80&w=400&auto=format&fit=crop" class="w-full h-40 md:h-48 object-cover rounded-xl mb-3" alt="Journal">
+                    <div>
+                        <h3 class="font-bold text-sm text-white line-clamp-1">Minimalist Leather Journal</h3>
+                        <p class="text-[11px] text-amber-400/80 mb-2">160 GSM Premium Dotted</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-stone-300 font-semibold text-sm">$18.00</span>
+                            <button class="bg-amber-500 text-stone-950 text-xs font-bold px-3 py-1.5 rounded-lg hover:bg-amber-400 transition">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-2xl overflow-hidden p-3 flex flex-col justify-between neon-glow">
+                    <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?q=80&w=400&auto=format&fit=crop" class="w-full h-40 md:h-48 object-cover rounded-xl mb-3" alt="Pens">
+                    <div>
+                        <h3 class="font-bold text-sm text-white line-clamp-1">Pastel Aesthetic Highlighters</h3>
+                        <p class="text-[11px] text-amber-400/80 mb-2">Gen-Z Study Favourite (6 pack)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-stone-300 font-semibold text-sm">$6.99</span>
+                            <button class="bg-amber-500 text-stone-950 text-xs font-bold px-3 py-1.5 rounded-lg hover:bg-amber-400 transition">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-2xl overflow-hidden p-3 flex flex-col justify-between neon-glow">
+                    <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=400&auto=format&fit=crop" class="w-full h-40 md:h-48 object-cover rounded-xl mb-3" alt="Fountain Pen">
+                    <div>
+                        <h3 class="font-bold text-sm text-white line-clamp-1">Vintage Brass Calligraphy Pen</h3>
+                        <p class="text-[11px] text-amber-400/80 mb-2">Timeless Collector's Choice</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-stone-300 font-semibold text-sm">$24.50</span>
+                            <button class="bg-amber-500 text-stone-950 text-xs font-bold px-3 py-1.5 rounded-lg hover:bg-amber-400 transition">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-2xl overflow-hidden p-3 flex flex-col justify-between neon-glow">
+                    <img src="https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?q=80&w=400&auto=format&fit=crop" class="w-full h-40 md:h-48 object-cover rounded-xl mb-3" alt="Stickers">
+                    <div>
+                        <h3 class="font-bold text-sm text-white line-clamp-1">Retro & Anime Sticker Set</h3>
+                        <p class="text-[11px] text-amber-400/80 mb-2">Perfect for Laptops & Hydroflasks</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-stone-300 font-semibold text-sm">$4.25</span>
+                            <button class="bg-amber-500 text-stone-950 text-xs font-bold px-3 py-1.5 rounded-lg hover:bg-amber-400 transition">Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommended" class="space-y-6">
+            <div class="border-b border-amber-900/40 pb-4">
+                <h2 class="serif-title text-3xl font-bold text-amber-400">Community Favorites</h2>
+                <p class="text-xs text-stone-400">Highly rated items reviewed honestly by bookworms of all ages</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-panel p-5 rounded-2xl border-l-4 border-amber-500 flex gap-4 items-start">
+                    <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=150&auto=format&fit=crop" class="w-16 h-20 object-cover rounded-lg flex-shrink-0" alt="Reviewed item">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <span class="font-semibold text-sm text-white">Neon Genesis Manga Vol 01</span>
+                            <div class="text-amber-400 text-xs"><i class="fa-solid fa-star"></i> 5.0</div>
+                        </div>
+                        <p class="text-xs text-stone-300 italic">"The artwork hits different. Pure nostalgia but styled perfectly. Delivery from Avari was super fast too, ordered via WhatsApp and it got here next day!"</p>
+                        <p class="text-[10px] text-amber-400/70 font-semibold">— Chloe, 19 (Student)</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-5 rounded-2xl border-l-4 border-amber-500 flex gap-4 items-start">
+                    <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=150&auto=format&fit=crop" class="w-16 h-20 object-cover rounded-lg flex-shrink-0" alt="Reviewed item">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <span class="font-semibold text-sm text-white">Vintage Brass Fountain Pen</span>
+                            <div class="text-amber-400 text-xs"><i class="fa-solid fa-star"></i> 4.9</div>
+                        </div>
+                        <p class="text-xs text-stone-300 italic">"Reminds me of the heavy pens we used in school. The ink flow is remarkably smooth, well worth the price. Elegant craftsmanship."</p>
+                        <p class="text-[10px] text-amber-400/70 font-semibold">— Arthur, 67 (Retired Educator)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <section id="savelist" class="glass-panel p-6 rounded-2xl space-y-4">
+                <h3 class="serif-title font-bold text-xl text-amber-400 flex items-center gap-2">
+                    <i class="fa-solid fa-heart text-red-500"></i> Your Aesthetic Saved List
+                </h3>
+                <div class="divide-y divide-amber-900/30">
+                    <div class="py-3 flex justify-between items-center">
+                        <div>
+                            <p class="text-sm font-semibold text-white">Classic Leather Journal</p>
+                            <p class="text-xs text-stone-400">Stationery</p>
+                        </div>
+                        <span class="text-xs text-amber-400 font-bold">$18.00</span>
+                    </div>
+                    <div class="py-3 flex justify-between items-center">
+                        <div>
+                            <p class="text-sm font-semibold text-white">The Midnight Library</p>
+                            <p class="text-xs text-stone-400">Novel</p>
+                        </div>
+                        <span class="text-xs text-amber-400 font-bold">$14.99</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="history" class="glass-panel p-6 rounded-2xl space-y-4">
+                <h3 class="serif-title font-bold text-xl text-amber-400 flex items-center gap-2">
+                    <i class="fa-solid fa-clock-rotate-left text-amber-500"></i> Continue Exploring
+                </h3>
+                <div class="flex gap-4 overflow-x-auto pb-2">
+                    <div class="flex-shrink-0 text-center w-20">
+                        <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?q=80&w=100&auto=format&fit=crop" class="w-16 h-16 object-cover rounded-xl mx-auto border border-amber-500/20" alt="history 1">
+                        <p class="text-[10px] truncate text-stone-300 mt-1">Highlighters</p>
+                    </div>
+                    <div class="flex-shrink-0 text-center w-20">
+                        <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=100&auto=format&fit=crop" class="w-16 h-16 object-cover rounded-xl mx-auto border border-amber-500/20" alt="history 2">
+                        <p class="text-[10px] truncate text-stone-300 mt-1">Chronicle Mag</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="glass-panel rounded-3xl p-8 border border-amber-500/20 space-y-6 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <h3 class="serif-title text-2xl font-bold text-amber-400">AVARI BOOKSTORE</h3>
+                    <p class="text-sm text-stone-400">Bridging generations through words and fine stationery craftsmanship.</p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 items-center w-full md:w-auto">
+                    <a href="https://wa.me/1234567890" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg transition duration-300">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Order via WhatsApp
+                    </a>
+                    
+                    <div class="text-sm text-stone-300 font-medium space-y-1">
+                        <p><i class="fa-solid fa-phone text-amber-500 mr-2"></i> Call Us: <strong>+1 234-567-890</strong></p>
+                        <p><i class="fa-solid fa-map-location-dot text-amber-500 mr-2"></i> <strong>123 Library Lane, Midtown NY</strong></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center text-xs text-stone-500 pt-4 border-t border-amber-900/40">
+                &copy; 2026 AVARI Bookstore. All Rights Reserved. Stay Lit & Stay Read.
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
